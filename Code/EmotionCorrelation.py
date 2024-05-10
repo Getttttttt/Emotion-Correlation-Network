@@ -53,7 +53,7 @@ def load_graph():
             emotions = list(map(int, parts[3].strip('[]').split(',')))  # Remove brackets and split by comma
             data.append((user1, user2, weight, emotions))
     
-    
+
     graph = nx.Graph()
     for user1, user2, weight, emotions in data:
         graph.add_edge(user1, user2, weight=weight)
